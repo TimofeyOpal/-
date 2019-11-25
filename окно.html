@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        .divi{
+            width: 100%;
+            height: 700px;
+            opacity: 0.5;
+            background: #8c8785;
+            z-index: 1;
+            position: fixed;
+
+
+        }
         .hidden{
             display: none;
         }
@@ -17,6 +27,7 @@
             background: #5e86d8;
             padding: 15px;
             position: absolute;
+            z-index: 2;
         }
         .close {
             margin-right: 15px;
@@ -26,23 +37,27 @@
     </style>
 </head>
 <body>
+<div class="divi hidden"></div>
 <button class="but">block</button>
 <div class="hidden block">
     <div class="close">Закрыть</div>
     <p>все получилось</p>
 </div>
 
+
 <script>
     var block = document.querySelector('.block');
     var close = document.querySelector('.close');
     var but = document.querySelector('.but');
+    var divi = document.querySelector('.divi');
 
     but.addEventListener('click',function () {
         block.classList.remove('hidden');
-        window.background = "rgba(0, 120, 201, 0.7)";
+        divi.classList.remove('hidden');
+
     });
     close.addEventListener('click', function () {
-        block.classList.add('hidden');
+        block.classList.add('hidden');//не добавил divi.classList.add('hidden');
     });
 
 </script>
