@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+        .block {
+            margin: 0 auto;
+            width: 500px;
+            height: 400px;
+            background: #5e86d8;
+            padding: 15px;
+            position: absolute;
+        }
+        .close {
+            margin-right: 15px;
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<button class="but">block</button>
+<div class="hidden block">
+    <div class="close">Закрыть</div>
+    <p>все получилось</p>
+</div>
+
+<script>
+    var block = document.querySelector('.block');
+    var close = document.querySelector('.close');
+    var but = document.querySelector('.but');
+
+    but.addEventListener('click',function () {
+        block.classList.remove('hidden');
+        window.background = "rgba(0, 120, 201, 0.7)";
+    });
+    close.addEventListener('click', function () {
+        block.classList.add('hidden');
+    });
+
+</script>
+</body>
+</html>
