@@ -39,8 +39,8 @@
 <body>
 <div class="divi hidden"></div>
 <button class="but">block</button>
-<div class="hidden block">
-    <div class="close">Закрыть</div>
+<div class="hidden block" tabindex="0" >
+    <div class="close" tabindex="0">Закрыть</div>
     <p>все получилось</p>
 </div>
 
@@ -56,9 +56,26 @@
         divi.classList.remove('hidden');
 
     });
+
     close.addEventListener('click', function () {
         block.classList.add('hidden');//не добавил divi.classList.add('hidden');
+
     });
+    but.addEventListener('keydown',function (evt) {
+        if(evt.keyCode === 13){
+            block.classList.remove('hidden');
+            divi.classList.remove('hidden');
+        };
+    });
+
+
+
+    close.addEventListener('keydown',function (evt) {
+        if(evt.keyCode ===27){
+            block.classList.add('hidden');
+        };
+    });
+
 
 </script>
 </body>
