@@ -62,7 +62,7 @@
 
     });
     but.addEventListener('keydown',function (evt) {
-        if(evt.keyCode === 13){
+        if(evt.which === 13){
             block.classList.remove('hidden');
             divi.classList.remove('hidden');
         };
@@ -71,7 +71,7 @@
 
 
     close.addEventListener('keydown',function (evt) {
-        if(evt.keyCode ===27){
+        if(evt.which === 27){
             block.classList.add('hidden');
         };
     });
