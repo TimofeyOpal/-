@@ -78,35 +78,38 @@
 
     block.addEventListener('mousedown', function (evt) {
         evt.preventDefault()
+            block.style.top = evt.clientY+'px';
+        block.style.left = evt.clientX+'px';
+
     });
 
-    var startMouse = {
-        x: evt.clientX,
-        y: evt.clientY
-    };
+    //var startMouse = {
+    //    x: evt.clientX,
+    //    y: evt.clientY
+    //};
 
-     console.log(addEventListener('mousedown'));
-        document.addEventListener
-        ('mousemove', onMouseMove);
 
-        document.addEventListener
-        ('mouseup', onMouseUp);
+      //  document.addEventListener
+      //  ('mousemove', onMouseMove);
 
-    var onMouseMove = function (moveEvt){
-        moveEvt.preventDefault();
+      //  document.addEventListener
+      //  ('mouseup', onMouseUp);
 
-        var shift = {
-            x: startMouse.x - moveEvt.clientX,
-            y: startMouse.y - moveEvt.clientY
-        };
-        var startMouse = {
-            x: evt.clientX,
-            y: evt.clientY
-        };
-        setup.style.top = (setup.offsetTop - shift.y) + 'px';
-        setup.style.left = (setup.offsetLeft - shift.x) + 'px';
+   // var onMouseMove = function (moveEvt){
+      //  moveEvt.preventDefault();
 
-    };
+      //  var shift = {
+     //       x: startMouse.x - moveEvt.clientX,
+       //     y: startMouse.y - moveEvt.clientY
+       // };
+      //  var startMouse = {
+       //     x: evt.clientX,
+       //     y: evt.clientY
+       // };
+      //  setup.style.top = (setup.offsetTop - shift.y) + 'px';
+      //  setup.style.left = (setup.offsetLeft - shift.x) + 'px';
+
+   // };
 
 </script>
 </body>
