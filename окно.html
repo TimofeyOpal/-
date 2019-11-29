@@ -21,7 +21,6 @@
             display: none;
         }
         .block {
-            margin: 0 auto;
             width: 500px;
             height: 400px;
             background: #5e86d8;
@@ -51,6 +50,7 @@
     var but = document.querySelector('.but');
     var divi = document.querySelector('.divi');
 
+
     but.addEventListener('click',function () {
         block.classList.remove('hidden');
         divi.classList.remove('hidden');
@@ -76,6 +76,37 @@
         };
     });
 
+    block.addEventListener('mousedown', function (evt) {
+        evt.preventDefault()
+    });
+
+    var startMouse = {
+        x: evt.clientX,
+        y: evt.clientY
+    };
+
+     console.log(addEventListener('mousedown'));
+        document.addEventListener
+        ('mousemove', onMouseMove);
+
+        document.addEventListener
+        ('mouseup', onMouseUp);
+
+    var onMouseMove = function (moveEvt){
+        moveEvt.preventDefault();
+
+        var shift = {
+            x: startMouse.x - moveEvt.clientX,
+            y: startMouse.y - moveEvt.clientY
+        };
+        var startMouse = {
+            x: evt.clientX,
+            y: evt.clientY
+        };
+        setup.style.top = (setup.offsetTop - shift.y) + 'px';
+        setup.style.left = (setup.offsetLeft - shift.x) + 'px';
+
+    };
 
 </script>
 </body>
