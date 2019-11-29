@@ -77,8 +77,14 @@
     });
 
     block.addEventListener('mousedown', function (evt) {
-        evt.preventDefault()
+        //evt.preventDefault();
             block.style.top = evt.clientY+'px';
+        block.style.left = evt.clientX+'px';
+
+    });
+    block.addEventListener('mousemove', function (evt) {
+        evt.preventDefault();
+        block.style.top = evt.clientY+'px';
         block.style.left = evt.clientX+'px';
 
     });
